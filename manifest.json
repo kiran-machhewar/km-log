@@ -4,7 +4,6 @@
     "description": "Extesnsion for searching apex logs in better way.",
     "permissions": ["activeTab","tabs","declarativeContent","storage"],   
     "page_action": {
-        "default_popup": "popup.html",
         "default_icon": {
             "16": "images/icons/sf-log.png",
             "32": "images/icons/sf-log.png",
@@ -14,15 +13,12 @@
     },
     "content_scripts": [
         {
-          "matches": [ "http://*/*"],
+          "matches": [
+            "http://*.force.com/*",
+            "https://*.salesforce.com/*"],
           "js": ["content-script.js"]
         }
-    ],
-    "options_page": "options.html",  
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-    },  
+    ], 
     "icons": {
         "16": "images/icons/sf-log.png",
         "32": "images/icons/sf-log.png",
