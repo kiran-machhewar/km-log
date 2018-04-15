@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <style>
+        body {
+            min-width:300px;
+        }
+    </style>
+  </head>
+  <body>
+        <div class="jumbotron">
+            <form>
+                <div class="form-group">
+                    <label for="searchKeyword">Search keyword:</label>
+                    <input type="text" class="form-control" id="searchKeyword" aria-describedby="searchHelp" placeholder="Enter search keyword">               
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="sflog.startDebugger();">Submit</button>
+            </form>
+        </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

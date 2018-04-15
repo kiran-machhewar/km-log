@@ -14,8 +14,8 @@
     "content_scripts": [
         {
           "matches": [
-            "http://*.force.com/*",
-            "https://*.salesforce.com/*"],
+                "http://*.force.com/*",
+                "https://*.salesforce.com/*"],
           "js": ["content-script.js"]
         }
     ], 
@@ -25,5 +25,9 @@
         "48": "images/icons/sf-log.png",
         "128": "images/icons/sf-log.png"
     },
-    "manifest_version": 2
+    "page_action": {
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 2,
+    "content_security_policy": "script-src 'self' https://example.com; object-src 'self'"
   }
