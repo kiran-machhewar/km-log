@@ -9,12 +9,13 @@
             "32": "images/icons/sf-log.png",
             "48": "images/icons/sf-log.png",
             "128": "images/icons/sf-log.png"
-        }
+        },
+        "default_popup": "popup.html"
     },
     "content_scripts": [
         {
           "matches": [
-                "http://*.force.com/*",
+                "https://*.force.com/*",
                 "https://*.salesforce.com/*"],
           "js": ["content-script.js"]
         }
@@ -25,9 +26,9 @@
         "48": "images/icons/sf-log.png",
         "128": "images/icons/sf-log.png"
     },
-    "page_action": {
-        "default_popup": "popup.html"
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
     },
-    "manifest_version": 2,
-    "content_security_policy": "script-src 'self' https://example.com; object-src 'self'"
+    "manifest_version": 2
   }

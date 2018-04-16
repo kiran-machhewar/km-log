@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" >
     <style>
         body {
-            min-width:300px;
+            min-width:600px;
         }
     </style>
   </head>
@@ -12,12 +12,17 @@
         <div class="jumbotron">
             <form>
                 <div class="form-group">
-                    <label for="searchKeyword">Search keyword:</label>
+                    <label for="searchKeyword">Search keyword:</label>                    
                     <input type="text" class="form-control" id="searchKeyword" aria-describedby="searchHelp" placeholder="Enter search keyword">               
+                    <label for="userName">User:</label>
+                    <input type="text" required="true" class="form-control" id="userName" aria-describedby="userName" placeholder="Enter user's name"> 
                 </div>
-                <button type="submit" class="btn btn-primary" onclick="sflog.startDebugger();">Submit</button>
+                
+                <button type="submit" id="search" class="btn btn-primary" >Search</button>
             </form>
+            <div id="logs">
+            </div>
         </div>
-    <script src="popup.js"></script>
+    <script src="popup.js"></script>   
   </body>
 </html>
